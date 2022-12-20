@@ -58,5 +58,6 @@ function removeNaN(value) {
             resValue += value[i];
         }
     }
-    return parseInt(resValue);
+    console.log(resValue);
+    return resValue;
 }
