@@ -79,6 +79,12 @@ td {
 thead td {
     border-bottom: 1px solid #d0d0d0;
 }
+tbody tr td {
+    border-bottom: 1px dashed #d0d0d0;
+}
+tbody tr:last-of-type td {
+    border-bottom: none;
+}
 tfoot td{
     border-top: 1px solid #d0d0d0;
 }

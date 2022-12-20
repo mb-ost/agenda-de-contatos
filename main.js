@@ -4,12 +4,14 @@ const inputNumber = document.getElementById('inputNumber');
 const contact_names = [];
 const contact_numbers = [];
 const addContactForm = document.getElementById('form-add-contato');
+const totalContacts = document.getElementById('totalContacts');
 
 addContactForm.addEventListener('submit', function(e){
     e.preventDefault();
 
-    addContact();
-    renderTable();
+    if (addContact()) {
+        renderTable();
+    }
 });
 
 function renderTable() {
@@ -19,6 +21,7 @@ function renderTable() {
     }
 
     tbody.innerHTML = tableHTML;
+    totalContacts.innerHTML = contact_names.length
 }
 
 function addContact() {
@@ -26,11 +29,21 @@ function addContact() {
         alert(`Nome ${inputName.value} não está completo`);
         return false;
     }
-    if (!(removeNaN(inputNumber.value) > 9999999999)) {
+    if (!(removeNaN(inputNumber.value) > 99999999)) {
+        alert("Número de telefone invalido");
+        return false;
+    }
+    if (contact_names.includes(inputName.value)) {
+        alert(`Nome ${inputName.value} já foi adicionado`);
+        return false;
+    }
+    if (contact_numbers.includes(inputNumber.value)) {
+        alert(`Numero ${inputNumber.value} já foi adicionado`);
         return false;
     }
     contact_names.push(inputName.value);
     contact_numbers.push(inputNumber.value);
+    return true;
 }
 
 function validateName(fullName) {
@@ -39,23 +52,11 @@ function validateName(fullName) {
 }
 
 function removeNaN(value) {
+    let resValue = '';
     for (i = 0; i < value.length; i++) {
-        if (value[i] == '+' ) {
-            value.replace('+', '');
+        if (!(value[i] == '+' || value[i] == ' ' || value[i] == '-' || value[i] == '(' || value[i] == ')')) {
+            resValue += value[i];
         }
-        if (value[i] == ' ' ) {
-            value[i] = '';
-        }
-        if (value[i] == '-' ) {
-            value[i] = '';
-        }
-        if (value[i] == '(' ) {
-            value[i] = '';
-        }
-        if (value[i] == ')' ) {
-            value[i] = '';
-        }
-        console.log(value[i]);
     }
-    console.log(value);
+    return parseInt(resValue);
 }
