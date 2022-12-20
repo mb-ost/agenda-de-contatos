@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    padding-top: 96px;
+}
+.container {
+    width: 95%;
+    max-width: 960px;
+    background-color: white;
+    min-height: 50vh;
+    margin: 0 auto;
+    box-shadow: 0px 0px 8px #d0d0d0;
+    padding: 8px;
+    border-radius: 16px;
+}
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    padding: 16px;
+}
+
+header {
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+main {
+    width: fit-content;
+    margin: 0 auto;
+}
+main form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main input,
+main button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 8px 16px;
+    padding: 4px 16px;
+    background-color: #f0f0f5;
+    border: 1px solid #a0a0a0;
+    height: 32px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px #d0d0d0;
+    font-size: 24px;
+}
+.table-div {
+    width: 100%;
+    padding: 16px;
+}
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px #d0d0d0;
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+}
+td {
+    padding: 4px;
+}
+thead td {
+    border-bottom: 1px solid #d0d0d0;
+}
+tfoot td{
+    border-top: 1px solid #d0d0d0;
+}

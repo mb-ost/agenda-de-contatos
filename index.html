@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+
+    <!---------FONTS--------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!--------CSS------------------>
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+<body>
+    <div class="container">
+        <!--------HEADER---------------->
+        <header>
+            <h1>Sua agenda</h1>
+        </header>
+        <main>
+            <!--------ADD NUMBER----------------->
+            <form id="form-add-contato">
+                <div class="input-fields">
+                    <input type="text" placeholder="Nome do contato" required>
+                    <input type="tel" placeholder="Numero do contato" required>
+                </div>
+                <button type="submit">Adicionar</button>
+            </form>
+            <div class="table-div">
+                <!--------LIST NUMBERS-------------->
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Numero</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>teste</td>
+                            <td>123</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Numero total de Contatos</td>
+                            <td>0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="./main.js"></script>
+    </body>
+</html>
